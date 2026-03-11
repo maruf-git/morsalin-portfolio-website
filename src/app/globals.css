@@ -1,26 +1,218 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-card: var(--bg-card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-fira), monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f5;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    
+    --text-primary: #09090b;
+    --text-secondary: #3f3f46;
+    --text-muted: #71717a;
+    
+    --border: rgba(0, 0, 0, 0.07);
+    --border-hover: rgba(59, 130, 246, 0.5);
+    
+    --accent: #3b82f6;
+    --accent-light: rgba(59, 130, 246, 0.1);
+    
+    --success: #10b981;
+    --success-light: rgba(16, 185, 129, 0.1);
+    
+    --radius: 1rem;
+  }
+
+  .dark {
+    --bg-primary: #020817;
+    --bg-secondary: #0d1526;
+    --bg-card: rgba(13, 21, 38, 0.75);
+    
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    
+    --border: rgba(255, 255, 255, 0.07);
+    --border-hover: rgba(59, 130, 246, 0.6);
+    
+    --accent: #3b82f6;
+    --accent-light: rgba(59, 130, 246, 0.15);
+    
+    --success: #10b981;
+    --success-light: rgba(16, 185, 129, 0.12);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    @apply tracking-normal leading-relaxed selection:bg-accent/30 selection:text-foreground relative;
+  }
+  
+  /* Mesh / Spotlight background — stronger, richer gradient orbs */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 10% 5%, rgba(59, 130, 246, 0.12), transparent 35%),
+      radial-gradient(circle at 90% 70%, rgba(16, 185, 129, 0.1), transparent 35%),
+      radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05), transparent 55%);
+    pointer-events: none;
+  }
+  
+  .dark body::before {
+    background:
+      radial-gradient(circle at 15% 0%, rgba(59, 130, 246, 0.2), transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.12), transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08), transparent 60%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-5xl mx-auto px-6 lg:px-8;
+  }
+
+  .alt-bg {
+    position: relative;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .alt-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-secondary);
+    opacity: 0.4;
+    z-index: -1;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28;
+  }
+  
+  /* Typography — more vibrant gradient eyebrow */
+  .section-eyebrow {
+    @apply text-[13px] font-extrabold tracking-[0.2em] uppercase mb-3;
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 50%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .section-heading {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-8;
+    color: var(--text-primary);
+  }
+  
+  .section-desc {
+    @apply text-[16px] sm:text-lg max-w-2xl mb-12;
+    color: var(--text-secondary);
+  }
+
+  /* Glassmorphism Card — stronger glass + richer hover glow */
+  .clean-card {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .clean-card:hover {
+    border-color: rgba(59, 130, 246, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -12px rgba(59, 130, 246, 0.2),
+                0 0 0 1px rgba(59, 130, 246, 0.05);
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 text-[12px] font-semibold rounded-full tracking-wide transition-all duration-200;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  
+  .badge:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+  
+  .badge-accent {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+  
+  .badge-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl text-[15px] bg-background/50 backdrop-blur-md transition-all outline-none;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-light);
+    background-color: var(--bg-primary);
+  }
+  
+  /* Primary Button — stronger glow */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[15px] font-bold transition-all relative overflow-hidden;
+    background: linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 18px 0 rgba(59, 130, 246, 0.4);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    background: linear-gradient(135deg, #60a5fa 0%, #6366f1 100%);
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[15px] font-bold transition-all relative overflow-hidden backdrop-blur-md;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
 }
