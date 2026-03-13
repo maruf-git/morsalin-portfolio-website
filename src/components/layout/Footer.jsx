@@ -72,7 +72,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[13px] text-text-muted">
-            &copy; {new Date().getFullYear()} Md. Morsalin. All rights reserved.
+            &copy; {new Date().getFullYear()} Md. Morsalin. All rights reserved. | Developed by <a href="https://marufurrahman.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-text-secondary transition-colors hover:cursor-pointer text-blue-600">Md. Maruf</a>
           </p>
           <p className="text-[13px] text-text-muted">
             Built with Next.js & Tailwind CSS.
