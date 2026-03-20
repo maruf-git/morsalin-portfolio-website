@@ -34,7 +34,7 @@ export const personalInfo = {
 
 // ─── Summary ──────────────────────────────────────────────────────────────────
 export const summary =
-  "Currently pursuing B.Sc.(Engineering) in Electrical and Electronic Engineering at Hajee Mohammad Danesh Science and Technology University, with a strong academic record (CGPA above 3.80). Passionate about research in renewable energy, power electronics, and Hybrid Electric Vehicle (HEV). Skilled in MATLAB, Simulink, DFT, SCAPS-1D, PSCAD, PLECS and OriginPro; actively engaged in research projects with faculty members and collaborators. Dedicated to continuous learning and innovation, with aspirations for higher studies.";
+  "Currently pursuing B.Sc.(Engineering) in Electrical and Electronic Engineering at Hajee Mohammad Danesh Science and Technology University, with a strong academic record (CGPA above 3.80). Passionate about research in renewable energy, power systems, and Hybrid Electric Vehicle (HEV). Skilled in MATLAB, Simulink, DFT, SCAPS-1D, PSCAD, PLECS and OriginPro; actively engaged in research projects with faculty members and collaborators. Dedicated to continuous learning and innovation, with aspirations for higher studies.";
 
 // ─── Education ────────────────────────────────────────────────────────────────
 export const education = [
@@ -70,7 +70,7 @@ export const researchInterests = [
   { label: "Power Electronics", icon: "🔌" },
   { label: "Power System Stability", icon: "🏗️" },
   { label: "Perovskite Solar Cells", icon: "☀️" },
-  { label: "SCAPS-1D Simulation", icon: "💻" },
+  // { label: "SCAPS-1D Simulation", icon: "💻" },
 ];
 
 // ─── Technical Skills ─────────────────────────────────────────────────────────
