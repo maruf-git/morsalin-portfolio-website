@@ -66,7 +66,7 @@ export default function Navbar() {
             onClick={() => go("#hero")}
             className="flex items-center gap-2 font-extrabold text-[16px] tracking-tight group"
           >
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-emerald-500 transition-all duration-300">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-emerald-500 transition-all duration-300 hover:cursor-pointer">
               Md. Morsalin
             </span>
           </button>

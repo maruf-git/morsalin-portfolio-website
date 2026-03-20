@@ -135,7 +135,7 @@ export default function Hero() {
             className="relative lg:ml-auto w-full max-w-md mx-auto lg:max-w-none flex justify-center lg:justify-end"
           >
             {/* Colorful Glow Background behind Photo */}
-            <div className="absolute inset-0 bg-linear-to-tr from-blue-500 to-emerald-400 rounded-3xl rotate-3 scale-105 opacity-20 blur-2xl animate-pulse" />
+            <div className="absolute inset-0 bg-linear-to-tr from-blue-500 to-emerald-400 rounded-3xl rotate-3 scale-105 opacity-20 blur-2xl" />
             <div className="absolute inset-0 bg-linear-to-tr from-blue-600 to-indigo-500 rounded-3xl -rotate-3 scale-105 opacity-30" />
             
             {/* Photo Container */}
