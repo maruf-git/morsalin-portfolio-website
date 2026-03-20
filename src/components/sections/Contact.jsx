@@ -109,9 +109,9 @@ export default function Contact() {
                 </div>
                 
                 <div className="pt-4">
-                  <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70 group/btn relative overflow-hidden">
+                  <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70 group/btn relative overflow-hidden hover:cursor-pointer">
                     <span className="relative z-10 flex items-center gap-2">
-                       {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</> : <><Send className="w-4 h-4 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform" /> Send Message</>}
+                       {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</> : <><Send className="w-4 h-4 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform " /> Send Message</>}
                     </span>
                   </button>
                 </div>
