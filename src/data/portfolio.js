@@ -22,6 +22,14 @@ export const personalInfo = {
   linkedinHandle: "/mdmorsalinhstu",
   researchgate: "https://www.researchgate.net/profile/Md-Morsalin-7",
   researchgateHandle: "/profile/Md-Morsalin-7",
+  // Research Profile Links
+  googleScholar: "https://scholar.google.com/citations?user=a-vhwUwAAAAJ&hl=en",
+  orcid: "https://orcid.org/0009-0007-1398-5418",
+  orcidId: "0009-0007-1398-5418",
+  scopus: "https://www.scopus.com/authid/detail.uri?authorId=60128929700",
+  scopusId: "60128929700",
+  webOfScience: "https://www.webofscience.com/wos/author/record/NDS-9522-2025",
+  webOfScienceId: "NDS-9522-2025",
 };
 
 // ─── Summary ──────────────────────────────────────────────────────────────────
@@ -60,6 +68,9 @@ export const researchInterests = [
   { label: "Renewable Energy", icon: "⚡" },
   { label: "Hybrid Electric Vehicle (HEV)", icon: "🔋" },
   { label: "Power Electronics", icon: "🔌" },
+  { label: "Power System Stability", icon: "🏗️" },
+  { label: "Perovskite Solar Cells", icon: "☀️" },
+  { label: "SCAPS-1D Simulation", icon: "💻" },
 ];
 
 // ─── Technical Skills ─────────────────────────────────────────────────────────
@@ -227,8 +238,7 @@ export const conferences = [
   },
   {
     id: 2,
-    authors:
-      "Ragab A. Sayed, Sabry Allam, Md. Morsalin, Mohammad Salah",
+    authors: "Ragab A. Sayed, Sabry Allam, Md. Morsalin, Mohammad Salah",
     title:
       "Theoretical Analysis of the Performance of a Hybrid Fuel Cell/Battery Powertrain Test Bench for Automotive Applications",
     event:
@@ -266,8 +276,7 @@ export const conferences = [
   },
   {
     id: 5,
-    authors:
-      "Md. Sojibur Rahman, Md. Sazedur Rahman, Md. Morsalin",
+    authors: "Md. Sojibur Rahman, Md. Sazedur Rahman, Md. Morsalin",
     title:
       "Performance Analysis of Lead-free Cs₂PtI₆-Based Double Perovskite Solar Cell With and Without Hole Transporting Layer Using SCAPS-1D Simulation Software",
     event:
@@ -455,11 +464,9 @@ export const references = [
     id: 1,
     name: "Rony Tota",
     title: "Assistant Professor",
-    department:
-      "Department of Electrical and Electronic Engineering (EEE)",
+    department: "Department of Electrical and Electronic Engineering (EEE)",
     faculty: "Faculty of Computer Science and Engineering (CSE)",
-    institution:
-      "Hajee Mohammad Danesh Science and Technology University",
+    institution: "Hajee Mohammad Danesh Science and Technology University",
     location: "Dinajpur-5200, Bangladesh",
     email: "ronytota98@gmail.com",
     phone: "(+880) 1738778498",
@@ -468,11 +475,9 @@ export const references = [
     id: 2,
     name: "Md. Ilius Hasan Pathan",
     title: "Assistant Professor",
-    department:
-      "Department of Electrical and Electronic Engineering (EEE)",
+    department: "Department of Electrical and Electronic Engineering (EEE)",
     faculty: "Faculty of Computer Science and Engineering (CSE)",
-    institution:
-      "Hajee Mohammad Danesh Science and Technology University",
+    institution: "Hajee Mohammad Danesh Science and Technology University",
     location: "Dinajpur-5200, Bangladesh",
     email: "pmilius2501@gmail.com",
     phone: "(+880) 1914105407",

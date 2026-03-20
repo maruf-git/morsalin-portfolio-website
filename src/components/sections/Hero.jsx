@@ -9,6 +9,34 @@ import { personalInfo } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Research profile link data
+const researchProfiles = [
+  {
+    label: "Scholar",
+    url: personalInfo.googleScholar,
+    color: "hover:text-blue-400",
+    tooltip: "Google Scholar",
+  },
+  {
+    label: "ORCID",
+    url: personalInfo.orcid,
+    color: "hover:text-emerald-400",
+    tooltip: "ORCID",
+  },
+  {
+    label: "Scopus",
+    url: personalInfo.scopus,
+    color: "hover:text-orange-400",
+    tooltip: "Scopus Author Profile",
+  },
+  {
+    label: "WoS",
+    url: personalInfo.webOfScience,
+    color: "hover:text-purple-400",
+    tooltip: "Web of Science",
+  },
+];
+
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
@@ -43,7 +71,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-8 max-w-xl font-medium">
-              Researcher specializing in <span className="font-bold text-text-primary">Renewable Energy</span>, <span className="font-bold text-text-primary">Power Electronics</span>, and <span className="font-bold text-text-primary">Hybrid Electric Vehicles</span>.
+              Researcher Enthusiastic about <span className="font-bold text-text-primary">Renewable Energy</span>, <span className="font-bold text-text-primary">Power Systems</span>, and <span className="font-bold text-text-primary">Hybrid Electric Vehicles</span>.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 mb-10">
@@ -52,7 +80,7 @@ export default function Hero() {
               <div className="badge">🏆 CGPA 3.84 / 4.00</div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 mb-10">
               <a href="#contact" className="btn-primary">
                 <Mail className="w-5 h-5" />
                 Get In Touch
@@ -63,7 +91,8 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6 mt-14 text-[14px] font-bold text-text-muted">
+            {/* Social / Contact Links */}
+            <div className="flex flex-wrap items-center gap-5 text-[13.5px] font-bold text-text-muted border-t border-border/50 pt-6 w-full">
               <a href={`mailto:${personalInfo.email}`} className="hover:text-text-primary hover:-translate-y-0.5 flex items-center gap-1.5 transition-all">
                 Email <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -73,6 +102,28 @@ export default function Hero() {
               <a href={personalInfo.researchgate} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 hover:-translate-y-0.5 flex items-center gap-1.5 transition-all">
                 ResearchGate <ExternalLink className="w-3.5 h-3.5" />
               </a>
+            </div>
+
+            {/* Research Profile Links */}
+            <div className="mt-5 w-full">
+              <p className="text-[11px] font-extrabold tracking-[0.18em] uppercase text-text-muted/60 mb-3">
+                Research Profiles
+              </p>
+              <div className="flex flex-wrap items-center gap-2.5">
+                {researchProfiles.map((profile) => (
+                  <a
+                    key={profile.label}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={profile.tooltip}
+                    className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-[12px] font-bold border border-border/60 bg-bg-card/60 backdrop-blur-sm text-text-muted ${profile.color} hover:border-current hover:-translate-y-0.5 transition-all duration-200`}
+                  >
+                    {profile.label}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
 
@@ -91,25 +142,21 @@ export default function Hero() {
             <div className="relative z-10 w-full aspect-4/5 sm:aspect-square lg:aspect-4/5 max-w-[400px] rounded-3xl overflow-hidden border-2 border-white/20 dark:border-white/10 shadow-2xl bg-bg-secondary">
               
               {/* Fallback pattern while waiting for real image */}
-              <div className="absolute inset-0 flex items-center justify-center bg-linear-to-b from-bg-secondary to-bg-card">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-linear-to-b from-bg-secondary to-bg-card">
                 <span className="text-text-muted font-medium text-sm text-center px-4">
-                  {/* USER: Replace the src below with your actual photo path (e.g. /images/morsalin.jpg) placed in the public folder */}
                   Please upload your photo to <br/><code className="text-accent bg-accent-light px-1 py-0.5 rounded">public/morsalin-photo.jpg</code>
                 </span>
-              </div>
+              </div> */}
 
               {/* Real Image component ready to use */}
               <Image 
-                src="/white_morsalin.png" 
-                // src="/blue_morsalin.png" 
-                // src="/cafe1_morsalin.jpg" 
-                alt="Md. Morsalin"
+                src="/mdmorsalin.png" 
+                alt="Md. Morsalin — EEE Researcher at HSTU"
                 fill
                 className="object-cover object-center relative z-20"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
                 onError={(e) => {
-                  // Hide broken image icon if image doesn't exist yet
                   e.currentTarget.style.display = 'none';
                 }}
               />

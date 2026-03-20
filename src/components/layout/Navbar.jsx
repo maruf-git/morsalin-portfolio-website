@@ -1,11 +1,11 @@
 /**
- * Navbar — Vibrant Colorful Glassmorphism
+ * Navbar — Vibrant Colorful Glassmorphism + Resume Download
  */
 
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { navLinks } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,6 @@ export default function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      // Detect active section
       const sections = navLinks.map((l) => l.href.slice(1));
       let current = "hero";
       for (const id of sections) {
@@ -81,7 +80,7 @@ export default function Navbar() {
                   key={link.href}
                   onClick={() => go(link.href)}
                   className={cn(
-                    "relative px-3.5 py-2 text-[13px] font-semibold transition-all duration-200 rounded-lg",
+                    "relative px-3.5 py-2 text-[13px] font-semibold transition-all duration-200 rounded-lg hover:cursor-pointer",
                     isActive
                       ? "text-accent"
                       : "text-text-secondary hover:text-text-primary hover:bg-bg-secondary/60"
@@ -100,17 +99,30 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right: toggle + CTA + hamburger */}
-          <div className="flex items-center gap-3">
-            {/* Desktop CTA */}
+          {/* Right: Resume + Contact + toggle + hamburger */}
+          <div className="flex items-center gap-2">
+            {/* Resume Download — Desktop */}
             <a
+              href="/md_morsalin_resume.pdf"
+              download="Md_Morsalin_Resume.pdf"
+              className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 shadow-[0_2px_12px_rgba(59,130,246,0.4)] hover:shadow-[0_4px_16px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:cursor-pointer"
+              aria-label="Download Resume"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Resume
+            </a>
+
+            {/* Contact CTA — Desktop */}
+            {/* <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); go("#contact"); }}
               className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 shadow-[0_2px_12px_rgba(59,130,246,0.4)] hover:shadow-[0_4px_16px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-0.5"
             >
               Contact
-            </a>
+            </a> */}
+
             <ThemeToggle />
+
             <button
               className="md:hidden p-2 rounded-lg text-text-secondary hover:text-accent hover:bg-accent/10 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -157,14 +169,27 @@ export default function Navbar() {
                 );
               })}
 
-              <div className="pt-3 pb-1 border-t border-border/60 mt-2">
+              {/* Mobile action buttons */}
+              <div className="pt-3 pb-1 border-t border-border/60 mt-2 grid grid-cols-1 gap-2">
+                {/* Resume download — Mobile */}
                 <a
+                  href="/md_morsalin_resume.pdf"
+                  download="Md_Morsalin_Resume.pdf"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-[14px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 shadow-[0_2px_12px_rgba(59,130,246,0.3)] transition-all"
+                >
+                  <Download className="w-4 h-4" />
+                  Resume
+                </a>
+
+                {/* Contact — Mobile */}
+                {/* <a
                   href="#contact"
                   onClick={(e) => { e.preventDefault(); go("#contact"); }}
-                  className="flex items-center justify-center w-full px-4 py-3 rounded-xl text-[14px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 shadow-[0_2px_12px_rgba(59,130,246,0.3)] transition-all"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-[14px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 shadow-[0_2px_12px_rgba(59,130,246,0.3)] transition-all"
                 >
-                  Get In Touch
-                </a>
+                  Contact
+                </a> */}
               </div>
             </div>
           </motion.div>
