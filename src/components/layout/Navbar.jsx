@@ -121,7 +121,7 @@ export default function Navbar() {
               Contact
             </a> */}
 
-            <ThemeToggle />
+            <ThemeToggle  />
 
             <button
               className="md:hidden p-2 rounded-lg text-text-secondary hover:text-accent hover:bg-accent/10 transition-colors"
