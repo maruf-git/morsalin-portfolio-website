@@ -92,7 +92,20 @@ export const technicalSkills = [
 // ─── Publications ─────────────────────────────────────────────────────────────
 export const publications = [
   {
-    id: 1,
+    id: 5,
+    authors:
+      "Mohammed A Albadrani, Ragab A. Sayed, Sabry Allam, Md. Morsalin, Hossam Youssef Hegazy, Samia Abdel Fattah, and Mohamed H. Abdelati",
+    title:
+      "Performance Comparison of Intelligent Energy Management Strategies for Hybrid Electric Vehicles with Photovoltaic Fuel Cell and Battery Integration",
+    journal: "[Q1, SCI]",
+    details: "",
+    doi: "https://www.mdpi.com/2313-0105/12/4/147",
+    doiText: "10.3390/batteries12040147",
+    status: "accepted",
+    isFirstAuthor: false,
+  },
+  {
+    id: 2,
     authors:
       "Md. Morsalin, Ragab A. Sayed, Md. Sazedur Rahman, Md. Ferdous Wahid, Mohammad Salah",
     title:
@@ -105,7 +118,7 @@ export const publications = [
     isFirstAuthor: true,
   },
   {
-    id: 2,
+    id: 3,
     authors:
       "Rony Tota, Tarikul Islam Tasin, Shak Mahmudul Hasan, Md. Morsalin, Md. Zamil Sultan, Md. Muien Ahmed Arnob, Mehedi Hasan Tanim, Najiba Abedin Sajan",
     title:
@@ -118,7 +131,7 @@ export const publications = [
     isFirstAuthor: false,
   },
   {
-    id: 3,
+    id: 4,
     authors:
       "Md. Sazedur Rahman, Ibnul Zarrah, Md. Morsalin, Md. Moshiur Rahman, Pritom Mojumder",
     title:
@@ -132,7 +145,7 @@ export const publications = [
     isFirstAuthor: false,
   },
   {
-    id: 4,
+    id: 5,
     authors:
       "Rony Tota, Tarikul Islam Tasin, Md. Morsalin*, Ragab A. Sayed, Sheeraz Iqbal, Shak Mahmudul Hasan, Md. Zamil Sultan, and Md. Muien Ahmed Arnob",
     title:
@@ -144,19 +157,6 @@ export const publications = [
     status: "published",
     isFirstAuthor: false,
     isCorresponding: true,
-  },
-  {
-    id: 5,
-    authors:
-      "Mohammed A Albadrani, Ragab A. Sayed, Sabry Allam, Md. Morsalin, Hossam Youssef Hegazy, Samia Abdel Fattah, and Mohamed H. Abdelati",
-    title:
-      "Performance Comparison of Intelligent Energy Management Strategies for Hybrid Electric Vehicles with Photovoltaic Fuel Cell and Battery Integration",
-    journal: "Batteries",
-    details: "",
-    doi: null,
-    doiText: null,
-    status: "accepted",
-    isFirstAuthor: false,
   },
   {
     id: 6,
