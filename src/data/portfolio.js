@@ -45,7 +45,7 @@ export const education = [
     location: "Dinajpur-5200, Bangladesh",
     duration: "January 2022 – Present",
     expectedGraduation: "August 2026",
-    result: "CGPA 3.84 / 4.00 (up to 3rd year)",
+    result: "CGPA 3.85 / 4.00 (up to 3rd year)",
     status: "Final Year Ongoing",
   },
 ];
