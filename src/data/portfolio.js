@@ -184,42 +184,42 @@ export const publications = [
     isFirstAuthor: false,
     isCorresponding: true,
   },
-  {
-    id: 8,
-    authors: "Md. Morsalin et al.",
-    title:
-      "Performance Assessment of Perovskite Absorber CsSnI₃-based Solar Cells via SCAPS-1D and MATLAB",
-    journal: "",
-    details: "",
-    doi: null,
-    doiText: null,
-    status: "ongoing",
-    isFirstAuthor: true,
-  },
-  {
-    id: 9,
-    authors: "Md. Morsalin et al.",
-    title:
-      "A Comprehensive Performance Analysis of an Eco-Friendly Cs₂AgAuBr₆-Based Double Perovskite Solar Cells: DFT And SCAPS-1D Simulation Approach",
-    journal: "",
-    details: "",
-    doi: null,
-    doiText: null,
-    status: "ongoing",
-    isFirstAuthor: true,
-  },
-  {
-    id: 10,
-    authors: "Md. Morsalin et al.",
-    title:
-      "An extensive charge transport layer optimization of eco-friendly Sn-based Cs₂AgInBr₆ double perovskite solar cells via SCAPS-1D",
-    journal: "",
-    details: "",
-    doi: null,
-    doiText: null,
-    status: "ongoing",
-    isFirstAuthor: true,
-  },
+  // {
+  //   id: 8,
+  //   authors: "Md. Morsalin et al.",
+  //   title:
+  //     "Performance Assessment of Perovskite Absorber CsSnI₃-based Solar Cells via SCAPS-1D and MATLAB",
+  //   journal: "",
+  //   details: "",
+  //   doi: null,
+  //   doiText: null,
+  //   status: "ongoing",
+  //   isFirstAuthor: true,
+  // },
+  // {
+  //   id: 9,
+  //   authors: "Md. Morsalin et al.",
+  //   title:
+  //     "A Comprehensive Performance Analysis of an Eco-Friendly Cs₂AgAuBr₆-Based Double Perovskite Solar Cells: DFT And SCAPS-1D Simulation Approach",
+  //   journal: "",
+  //   details: "",
+  //   doi: null,
+  //   doiText: null,
+  //   status: "ongoing",
+  //   isFirstAuthor: true,
+  // },
+  // {
+  //   id: 10,
+  //   authors: "Md. Morsalin et al.",
+  //   title:
+  //     "An extensive charge transport layer optimization of eco-friendly Sn-based Cs₂AgInBr₆ double perovskite solar cells via SCAPS-1D",
+  //   journal: "",
+  //   details: "",
+  //   doi: null,
+  //   doiText: null,
+  //   status: "ongoing",
+  //   isFirstAuthor: true,
+  // },
 ];
 
 // ─── Conferences ──────────────────────────────────────────────────────────────

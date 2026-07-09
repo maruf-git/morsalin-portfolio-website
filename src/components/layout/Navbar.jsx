@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             {/* Resume Download — Desktop */}
             <a
-              href="/md_morsalin_resume.pdf"
+              href="/md_morsalin_resume_updated.pdf.pdf"
               download="Md_Morsalin_Resume.pdf"
               className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 shadow-[0_2px_12px_rgba(59,130,246,0.4)] hover:shadow-[0_4px_16px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:cursor-pointer"
               aria-label="Download Resume"
