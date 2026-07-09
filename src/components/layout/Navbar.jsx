@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             {/* Resume Download — Desktop */}
             <a
-              href="/md_morsalin_resume_updated.pdf.pdf"
+              href="/md_morsalin_resume_updated.pdf"
               download="Md_Morsalin_Resume.pdf"
               className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 shadow-[0_2px_12px_rgba(59,130,246,0.4)] hover:shadow-[0_4px_16px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:cursor-pointer"
               aria-label="Download Resume"
@@ -173,7 +173,7 @@ export default function Navbar() {
               <div className="pt-3 pb-1 border-t border-border/60 mt-2 grid grid-cols-1 gap-2">
                 {/* Resume download — Mobile */}
                 <a
-                  href="/md_morsalin_resume.pdf"
+                  href="/md_morsalin_resume_updated.pdf"
                   download="Md_Morsalin_Resume.pdf"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-[14px] font-bold text-white bg-linear-to-r from-blue-500 to-indigo-600 shadow-[0_2px_12px_rgba(59,130,246,0.3)] transition-all"
