@@ -35,7 +35,7 @@ export const metadata = {
     template: "%s | Md. Morsalin",
   },
   description:
-    "Official academic portfolio of Md. Morsalin — Final-year EEE student at HSTU, Bangladesh. Researcher specializing in Renewable Energy, Power Systems, Power System Stability, Perovskite Solar Cells, and Hybrid Electric Vehicles. IEEE Student Member. Google Scholar, ORCID, Scopus, and Web of Science indexed publications.",
+    "Official academic portfolio of Md. Morsalin — EEE graduate of HSTU, Bangladesh. Researcher specializing in Renewable Energy, Power Systems, Power System Stability, Perovskite Solar Cells, and Hybrid Electric Vehicles. IEEE Student Member. Google Scholar, ORCID, Scopus, and Web of Science indexed publications.",
 
   // Keywords (long-tail, academic-specific)
   keywords: [
@@ -149,7 +149,7 @@ const personJsonLd = {
   familyName: "Morsalin",
   jobTitle: "EEE Researcher & Engineer",
   description:
-    "Final-year EEE student at Hajee Mohammad Danesh Science and Technology University, Bangladesh. Researcher specializing in Renewable Energy, Power Electronics, Power System Stability, Perovskite Solar Cells, and Hybrid Electric Vehicles.",
+    "EEE graduate of Hajee Mohammad Danesh Science and Technology University, Bangladesh. Researcher specializing in Renewable Energy, Power Electronics, Power System Stability, Perovskite Solar Cells, and Hybrid Electric Vehicles.",
   url: siteUrl,
   email: "mdmorsalin.hstu@gmail.com",
   telephone: "+8801732056765",

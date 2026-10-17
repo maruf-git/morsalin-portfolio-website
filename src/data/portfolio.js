@@ -34,7 +34,7 @@ export const personalInfo = {
 
 // ─── Summary ──────────────────────────────────────────────────────────────────
 export const summary =
-  "Currently pursuing B.Sc.(Engineering) in Electrical and Electronic Engineering at Hajee Mohammad Danesh Science and Technology University, with a strong academic record (CGPA above 3.80). Passionate about research in renewable energy, power systems, and Hybrid Electric Vehicle (HEV). Skilled in MATLAB, Simulink, DFT, SCAPS-1D, PSCAD, PLECS and OriginPro; actively engaged in research projects with faculty members and collaborators. Dedicated to continuous learning and innovation, with aspirations for higher studies.";
+  "B.Sc.(Engineering) graduate in Electrical and Electronic Engineering at Hajee Mohammad Danesh Science and Technology University, with a strong academic record (CGPA 3.843 / 4.00). Passionate about research in renewable energy, power systems, and Hybrid Electric Vehicle (HEV). Skilled in MATLAB, Simulink, DFT, SCAPS-1D, PSCAD, PLECS and OriginPro; actively engaged in research projects with faculty members and collaborators. Dedicated to continuous learning and innovation, with aspirations for higher studies.";
 
 // ─── Education ────────────────────────────────────────────────────────────────
 export const education = [
@@ -43,10 +43,9 @@ export const education = [
     field: "Electrical and Electronic Engineering",
     institution: "Hajee Mohammad Danesh Science and Technology University",
     location: "Dinajpur-5200, Bangladesh",
-    duration: "January 2022 – Present",
-    expectedGraduation: "August 2026",
-    result: "CGPA 3.85 / 4.00 (up to 3rd year)",
-    status: "Final Year Ongoing",
+    duration: "Academic Year: 2021 – 2024",
+    result: "CGPA 3.843 / 4.00",
+    status: "Completed",
   },
 ];
 

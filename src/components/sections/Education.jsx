@@ -58,8 +58,8 @@ export default function Education() {
                     </span>
                   )}
                 </div>
-                {edu.expectedGraduation && (
-                  <span className="text-xs text-text-muted/80 italic">Expected: {edu.expectedGraduation}</span>
+                {edu.graduated && (
+                  <span className="text-xs text-text-muted/80 italic">Graduated: {edu.graduated}</span>
                 )}
               </div>
             </motion.div>

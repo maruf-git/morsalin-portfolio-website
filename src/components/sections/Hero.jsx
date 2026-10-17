@@ -88,7 +88,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 mb-10">
               <div className="badge">📌 Dinajpur, Bangladesh</div>
               <div className="badge">🎓 HSTU — EEE</div>
-              <div className="badge">🏆 CGPA 3.85 / 4.00</div>
+              <div className="badge">🏆 CGPA 3.843 / 4.00</div>
             </div>
 
             <div className="flex flex-wrap items-center gap-4 mb-10">
