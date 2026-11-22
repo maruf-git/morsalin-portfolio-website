@@ -45,6 +45,9 @@ export default function References() {
               
               <div className="flex-1 flex flex-col h-full">
                 <h3 className="font-bold text-lg text-text-primary mb-1 group-hover:text-accent transition-colors">{rRef.name}</h3>
+                {rRef.role && (
+                  <p className="text-[12px] font-bold uppercase tracking-wider text-accent mb-1.5">{rRef.role}</p>
+                )}
                 <p className="text-[14.5px] font-semibold text-text-secondary mb-2">{rRef.title}</p>
                 <div className="text-[13.5px] font-medium text-text-muted space-y-1 mb-6">
                   <p>{rRef.department}</p>
@@ -53,12 +56,14 @@ export default function References() {
                 </div>
                 
                 <div className="flex flex-col gap-3 pt-5 border-t border-border/60 mt-auto">
-                  <a href={`mailto:${rRef.email}`} className="inline-flex items-center gap-2.5 text-[13.5px] font-semibold text-text-secondary hover:text-accent transition-colors group/link w-fit">
-                    <span className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover/link:bg-accent group-hover/link:text-white transition-colors">
-                      <Mail className="w-3.5 h-3.5" /> 
-                    </span>
-                    {rRef.email}
-                  </a>
+                  {rRef.emails.map((email) => (
+                    <a key={email} href={`mailto:${email}`} className="inline-flex items-center gap-2.5 text-[13.5px] font-semibold text-text-secondary hover:text-accent transition-colors group/link w-fit max-w-full break-all">
+                      <span className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover/link:bg-accent group-hover/link:text-white transition-colors shrink-0">
+                        <Mail className="w-3.5 h-3.5" />
+                      </span>
+                      {email}
+                    </a>
+                  ))}
                   <a href={`tel:${rRef.phone}`} className="inline-flex items-center gap-2.5 text-[13.5px] font-semibold text-text-secondary hover:text-emerald-500 transition-colors group/link w-fit">
                     <span className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 group-hover/link:bg-emerald-500 group-hover/link:text-white transition-colors">
                       <Phone className="w-3.5 h-3.5" /> 

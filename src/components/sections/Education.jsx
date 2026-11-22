@@ -40,6 +40,12 @@ export default function Education() {
                   <span className="w-1.5 h-1.5 rounded-full bg-accent/50" />
                   {edu.institution}
                 </div>
+                {edu.thesis && (
+                  <p className="text-sm text-text-secondary mt-4 pt-4 border-t border-border/50 leading-relaxed">
+                    <span className="font-bold text-text-primary">Undergraduate Thesis: </span>
+                    <span className="italic">&ldquo;{edu.thesis}&rdquo;</span>
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col md:items-end gap-3 text-sm text-text-secondary bg-bg-secondary/50 p-4 rounded-xl border border-border/50">

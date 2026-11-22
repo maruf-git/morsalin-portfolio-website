@@ -56,8 +56,12 @@ export default function Experience() {
                 </p>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-text-muted mt-3 pt-3 border-t border-border/50">
                   <span className="font-medium text-text-primary/70">{exp.duration}</span>
-                  <span className="hidden sm:block w-1 h-1 rounded-full bg-border" />
-                  <span>{exp.department}</span>
+                  {exp.department && (
+                    <>
+                      <span className="hidden sm:block w-1 h-1 rounded-full bg-border" />
+                      <span>{exp.department}</span>
+                    </>
+                  )}
                 </div>
                 
                 {exp.credential && (

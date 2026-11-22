@@ -1,6 +1,6 @@
 # Md. Morsalin — Academic Portfolio
 
-Personal academic portfolio for **Md. Morsalin**, Final-year EEE student and researcher at Hajee Mohammad Danesh Science and Technology University (HSTU), Bangladesh. Specializes in Renewable Energy, Power Systems, Power System Stability, and Hybrid Electric Vehicles.
+Personal academic portfolio for **Md. Morsalin**, EEE graduate and researcher at Hajee Mohammad Danesh Science and Technology University (HSTU), Bangladesh. Specializes in Renewable Energy, Power Systems, Power System Stability, and Hybrid Electric Vehicles.
 
 🔗 **Live:** [mdmorsalin.com](https://mdmorsalin.com)
 

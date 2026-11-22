@@ -92,9 +92,9 @@ export default function Publications() {
                       href={pub.doi}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors"
+                      className="inline-flex items-start gap-1.5 max-w-full break-all text-[13px] font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors"
                     >
-                      <ExternalLink className="w-3.5 h-3.5" /> {pub.doiText || "View DOI"}
+                      <ExternalLink className="w-3.5 h-3.5 mt-0.5 shrink-0" /> {pub.doiText || "View DOI"}
                     </a>
                   )}
                 </div>

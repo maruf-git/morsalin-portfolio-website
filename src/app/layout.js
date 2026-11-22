@@ -152,7 +152,7 @@ const personJsonLd = {
     "EEE graduate of Hajee Mohammad Danesh Science and Technology University, Bangladesh. Researcher specializing in Renewable Energy, Power Electronics, Power System Stability, Perovskite Solar Cells, and Hybrid Electric Vehicles.",
   url: siteUrl,
   email: "mdmorsalin.hstu@gmail.com",
-  telephone: "+8801732056765",
+  telephone: "+8801616931396",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Dinajpur",
